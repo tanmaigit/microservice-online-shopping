@@ -18,4 +18,5 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'api'], function($router)
 {	
 	$router->get('products', 'ProductController@getAll');
+	$router->get('product/{productId}', 'ProductController@getProductDetail');
 });

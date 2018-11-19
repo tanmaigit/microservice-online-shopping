@@ -1,14 +1,21 @@
 import * as productDetailAction from './actionTypes';
 
+import axios from 'axios';
+
+const apiUrl = 'http://localhost:2000/api';
+const config = {
+	withCredentials: true
+};
+
 function getProduct(productId) {
-	return new Promise((resolve, reject) => {
-		const products = {
-			'p1': { id: 'p1', name: '[Toyota]Detail', price: '10000' },
-			'p2': { id: 'p2', name: '[Audi]Detail', price: '50000' },
-			'p3': { id: 'p3', name: '[Volkswagen]Detail', price: '20000' }
-		};
-		resolve(products[productId]);
-	});
+	return axios.get(`${apiUrl}/product/${productId}`, config)
+		.then(response => {
+			return response.data;
+		})
+		.catch(error => {
+			throw(error);
+		}
+	);
 }
 
 export const actionGetProduct = (productId) => {

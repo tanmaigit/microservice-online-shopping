@@ -9,7 +9,7 @@ class ProductDetail extends React.Component {
 				<div className="col-12 col-lg-6">
 				  <div className="card bg-light mb-3">
 					<div className="card-body">
-					  <a href data-toggle="modal" data-target="#productModal">
+					  <a href="#" data-toggle="modal" data-target="#productModal">
 						<img className="img-fluid" src="https://dummyimage.com/800x800/55595c/fff" />
 						<p className="text-center">Zoom</p>
 					  </a>
@@ -26,8 +26,8 @@ class ProductDetail extends React.Component {
 					  <form method="get" action="cart.html">
 						<div className="form-group">
 						  <label htmlFor="colors">Color</label>
-						  <select className="custom-select" id="colors">
-							<option selected>Select</option>
+						  <select defaultValue="" className="custom-select" id="colors">
+							<option value="">Select</option>
 							<option value={1}>Blue</option>
 							<option value={2}>Red</option>
 							<option value={3}>Green</option>
@@ -71,7 +71,7 @@ class ProductDetail extends React.Component {
 						<a className="pull-right" href="#reviews">View all reviews</a>
 					  </div>
 					  <div className="datasheet p-3 mb-2 bg-info text-white">
-						<a href className="text-white"><i className="fa fa-file-text" /> Download DataSheet</a>
+						<a href="#" className="text-white"><i className="fa fa-file-text" /> Download DataSheet</a>
 					  </div>
 					</div>
 				  </div>

@@ -1,14 +1,20 @@
 import * as action from './actionTypes';
+import axios from 'axios';
+
+const apiUrl = 'http://localhost:2000/api';
+const config = {
+	withCredentials: true
+};
 
 function getProductList(filter) {
-	return new Promise((resolve, reject) => {
-		const products = [
-			{ id: 'p1', name: '[Toyota]' + filter, price: '10000' },
-			{ id: 'p2', name: '[Audi]' + filter, price: '50000' },
-			{ id: 'p3', name: '[Volkswagen]' + filter, price: '20000' }
-		];
-		resolve(products);
-	});
+	return axios.get(`${apiUrl}/products`, config)
+		.then(response => {
+			return response.data;
+		})
+		.catch(error => {
+			throw(error);
+		}
+	);
 }
 
 export const actionGetProductList = filter => {
