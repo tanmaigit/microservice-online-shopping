@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-class Product extends React.Component {
+class ProductList extends React.Component {
 	render() {
 		const { id, name, price } = this.props.data;
 		return (
@@ -25,4 +25,4 @@ class Product extends React.Component {
 	}
 }
 
-export default Product;
+export default ProductList;

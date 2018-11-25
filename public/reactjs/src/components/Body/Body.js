@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductListContainer from '../../modules/productList/containers/ProductListContainer';
+import ProductListContainer from '../productList/ProductListContainer';
 
 const Body = () => (
 	<div className="body">

@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import PropTypes from "prop-types";
-import ProductDetail from '../components/ProductDetail';
-import { actionGetProduct } from '../actions';
+import ProductDetail from './ProductDetail';
+import { actionGetProduct } from './actions';
 
 class ProductDetailContainer extends React.Component {
 	componentDidMount() {

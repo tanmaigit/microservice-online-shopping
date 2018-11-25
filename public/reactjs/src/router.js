@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Body from './components/Body/Body';
-import ProductDetail from './modules/productDetail/containers/ProductDetailContainer';
+import ProductDetail from './components/productDetail/ProductDetailContainer';
 
 const MainRouter = () => (
 	<div className="content">
